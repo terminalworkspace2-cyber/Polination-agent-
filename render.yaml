@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: pollinations-agent
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: POLLINATIONS_API_KEY
+        sync: false
+      - key: SERVER_API_KEY
+        sync: false
